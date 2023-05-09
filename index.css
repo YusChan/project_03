@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, skyblue, pink);
+    /* padding: 0 300px; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    border: 0;
+}
+
+
+/*  */
+
+
+/* 主体盒子 */
+
+#containe {
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    border-radius: 20px;
+    background: linear-gradient(to left, rgb(77, 246, 226), skyblue);
+    margin: 20px auto;
+    padding-bottom: 20px;
+    box-shadow: -1px 3px 3px rgba(0, 0, 0, .3);
+}
+
+
+/* 标题 */
+
+.title {
+    text-align: center;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    margin-bottom: 20px;
+}
+
+
+/* 每日待办 */
+
+.daily-daiban {
+    display: flex;
+    line-height: 40px;
+}
+
+.daily-daiban .date {
+    width: 152px;
+    color: #fff;
+}
+
+.ipt {
+    flex: 1;
+    background-color: purple;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.ipt input {
+    width: 13%;
+    transition: all .5s;
+    padding-left: 5px;
+    margin: 0 4px;
+}
+
+.ipt input.sixpx {
+    width: 38%;
+    border: 1px solid #4288e3;
+}
+
+.btn {
+    height: 27px;
+    width: 40px;
+    font-size: 8px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: skyblue;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* 导航栏 */
+
+.nav {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.nav_ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_ul li {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.nav_ul li.active {
+    border-bottom: 2px solid purple;
+}
+
+
+/* 主体 */
+
+
+/* 未完成待办主体 */
+
+#main-w {
+    transition: all .5s;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,
+td {
+    /* 设定tr 和 th 的最小宽度为 191像素 */
+    min-width: 150px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+/* table tbody td:nth-child(-n+4) {
+    text-align: left;
+    padding: 6px;
+}
+
+table tbody td:nth-child(1) {
+    text-align: center;
+    padding: 6px;
+} */
+
+table thead tr {
+    height: 60px;
+}
+
+table tbody tr {
+    height: 40px;
+    color: red;
+    font-size: 18px;
+}
+
+table tbody tr td a {
+    display: block;
+}
+
+
+/* 已完成待办主体 */
+
+#main-y {
+    display: none;
+    transition: all .5s;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block !important;
+}
+
+
+/* 这是一个媒体查询
+如果 浏览器可视区域的宽度 <= 400px，那么就让 主体盒子宽度为200px 
+*/
+
+@media screen and (max-width:650px) {
+    #containe {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:1110px) {
+    table th,
+    td {
+        /* 设定tr 和 th 的最小宽度为 191像素 */
+        min-width: 100px;
+        border: 1px solid rgb(255, 255, 255);
+    }
+}
+
+
+/* 媒体查询，根据屏幕宽度，设定不同的选定之后文本框的宽度 */
+
+@media screen and (max-width:1490px) {
+    .ipt input.sixpx {
+        width: 36%;
+        border: 1px solid #4288e3;
+    }
+}
+
+@media screen and (max-width:1390px) {
+    .ipt input.sixpx {
+        width: 34%;
+        border: 1px solid #4288e3;
+    }
+}
+
+@media screen and (max-width:1285px) {
+    .ipt input.sixpx {
+        width: 32%;
+        border: 1px solid #4288e3;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .ipt input.sixpx {
+        width: 20%;
+        border: 1px solid #4288e3;
+    }
+}

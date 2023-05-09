@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日计划</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="containe">
+        <!-- 头部 -->
+        <h1 class="title">每日待办</h1>
+        <!-- 添加待办 -->
+        <div class="daily-daiban">
+            <div class="date"></div>
+            <div class="ipt">
+                <form action="" class="info">早:
+                    <input type="text" class="ipt1">中:
+                    <input type="text" class="ipt2">晚:
+                    <input type="text" class="ipt3">睡前:
+                    <input type="text" class="ipt4">
+                    <button class="btn">添加</button>
+                </form>
+            </div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="nav">
+            <ul class="nav_ul">
+                <li class="w active">未完成任务</li>
+                <li class="y">已完成任务</li>
+            </ul>
+        </div>
+        <!-- 主体未完成任务 -->
+        <div id="main-w">
+            <table class="main-w-table">
+                <thead>
+                    <tr>
+                        <th>添加时间</th>
+                        <th>早晨任务</th>
+                        <th>中午任务</th>
+                        <th>晚上任务</th>
+                        <th>睡前总结</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                        <td>
+                            <a href="#">添加已完成任务</a>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <!-- 主体已完成任务 -->
+        <div id="main-y">
+            <table class="main-y-table">
+                <thead>
+                    <tr>
+                        <th>已完成任务时间</th>
+                        <th>已完成早晨任务</th>
+                        <th>已完成中午任务</th>
+                        <th>已完成晚上任务</th>
+                        <th>已完成睡前总结</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                        <td>
+                            <a href="#">删除已完成任务</a>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 引入js样式 -->
+    <script src="index.js"></script>
+</body>
+
+</html>
